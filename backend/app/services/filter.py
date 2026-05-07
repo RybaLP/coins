@@ -18,15 +18,13 @@ def apply_crypto_filters(raw_coins: List[dict]) -> List[CoinOut]:
             preview = coin.preview_listing if coin.preview_listing is not None else True
 
             cond_mcap = mcap > 0
-            
             cond_preview = preview is True
-            
             cond_supply = max_s is not None and total_s is not None and max_s == total_s
             cond_fdv = fdv < 100_000_000
-            
             cond_vol = vol > 50_000
+            cond_tvl = True if tvl == 0 else tvl > 50_000
 
-            if all([cond_mcap, cond_preview, cond_supply, cond_fdv, cond_vol]):
+            if all([cond_mcap, cond_preview, cond_supply, cond_fdv, cond_vol, cond_tvl]):
                 filtered_output.append(CoinOut(
                     id=coin.id,
                     symbol=(coin.symbol or "").upper(),
