@@ -2,7 +2,7 @@ import axios from "axios";
 import type { Coin } from "../types/coin";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ?? "http://localhost:8000",
+  baseURL: "",
 });
 
 export async function fetchFilteredCoins(): Promise<Coin[]> {
