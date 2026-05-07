@@ -1,10 +1,10 @@
-# 🚀 Crypto Scanner — Full-Stack Task
+#  Crypto Scanner — Full-Stack Task
 
 A professional cryptocurrency filtering dashboard built with **FastAPI** (Python) and **React + TypeScript**. The app identifies potential "hidden gem" projects by applying strict tokenomic filters on real-time data from the CoinGecko API.
 
 ---
 
-## 🛠 Features
+##  Features
 
 - **Strict Filtering**: Only projects meeting all criteria: `MCap > 0`, `preview_listing == true`, `Max Supply == Total Supply`, `FDV < $100M`, `24h Volume > $50k`, `TVL > $50k`.
 - **Advanced Frontend**: Search by name, dynamic FDV threshold input, and sorting by Market Cap or 24h Volume.
@@ -13,7 +13,7 @@ A professional cryptocurrency filtering dashboard built with **FastAPI** (Python
 
 ---
 
-## ⚡ Quick Start (Docker — Recommended)
+##  Quick Start (Docker — Recommended)
 
 Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed.
 
@@ -28,7 +28,7 @@ Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/) insta
 
 ---
 
-## 🔧 Manual Setup
+##  Manual Setup
 
 ### Backend (FastAPI)
 
@@ -66,7 +66,7 @@ Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/) insta
 
 ---
 
-## 📝 Assumptions & Limitations
+##  Assumptions & Limitations
 
 - **Tokenomics filter**: `Max Supply == Total Supply` identifies fully diluted projects with no future inflation risk.
 - **API limits**: The app uses the free public CoinGecko API (no key required). If the list is empty, it means none of the top 250 coins by market cap currently satisfy all the strict filter conditions simultaneously — this is expected behavior given how restrictive the criteria are.
@@ -76,7 +76,7 @@ Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/) insta
 
 ---
 
-## 🤖 AI Workflow
+##  AI Workflow
 
 **Tools used**: Claude (Anthropic), Cursor
 
